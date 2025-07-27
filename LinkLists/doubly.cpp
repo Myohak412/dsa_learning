@@ -1,3 +1,7 @@
+// bool codingTime = false;
+// sleepMode();
+//Ek ek node jodke hi poori DSA train banti hai!
+
 #include <iostream>
 using namespace std;
 
@@ -13,15 +17,12 @@ int main(){
 
     // second node 
     Node* second = new Node();
-    head->data = 20;
+    second->data = 20;
 
-    //pehle node ka next -> second node 
-    head->next = second;
+    head->next = second; //pehle node ka next -> second node   i.e connecting first node to second node
+    second->next = NULL;  //dusre node ka next NULL hai
 
-    //dusre node ka next NULL hai
-    second->next = NULL;
-
-    Node* temp =head;
+    Node* temp = head;
     while (temp !=NULL){
         cout << temp->data << " -> ";
         temp = temp->next;
